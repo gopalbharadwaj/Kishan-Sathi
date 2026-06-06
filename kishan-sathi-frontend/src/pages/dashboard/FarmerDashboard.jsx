@@ -24,18 +24,15 @@ const FarmerDashboard = () => {
 
     try {
 
-      const data =
-        await getMyAppointments();
+      const data = await getMyAppointments();
 
-      console.log(data);
+      console.log("MY APPOINTMENTS:", data);
 
-      setAppointments(
-        data.appointments || []
-      );
+      setAppointments(data.appointments || []);
 
     } catch (error) {
 
-      console.log(error);
+      console.log("ERROR:", error);
 
     }
 
