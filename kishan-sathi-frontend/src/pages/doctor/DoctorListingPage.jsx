@@ -46,8 +46,12 @@ const DoctorListingPage = () => {
           await getDoctors();
 
         setDoctors(
-          data.doctors || []
+          Array.isArray(data)
+            ? data
+            : data.doctors || []
         );
+
+        console.log("Doctors API:", data);
 
       } catch (error) {
 
@@ -69,7 +73,7 @@ const DoctorListingPage = () => {
           )
       )
       : [];
-      
+
   return (
 
     <DashboardLayout>
