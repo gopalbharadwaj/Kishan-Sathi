@@ -7,7 +7,7 @@ async () => {
 
   const response =
   await API.get(
-    "/api/doctors/all"
+    "/doctors/all"
   );
 
   return response.data;
@@ -21,7 +21,7 @@ async (id) => {
 
   const response =
   await API.get(
-    `/api/doctors/${id}`
+    `/doctors/${id}`
   );
 
   return response.data;
