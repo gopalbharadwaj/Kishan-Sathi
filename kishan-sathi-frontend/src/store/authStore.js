@@ -21,7 +21,7 @@ const useAuthStore = create((set) => ({
       set({ loading: true });
 
       const res = await api.post(
-        "/api/auth/register",
+        "/auth/register",
         formData
       );
 
@@ -52,7 +52,7 @@ const useAuthStore = create((set) => ({
       set({ loading: true });
 
       const res = await api.post(
-        "/api/auth/login",
+        "/auth/login",
         formData
       );
 
