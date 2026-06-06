@@ -6,6 +6,7 @@ import DashboardLayout
 import {
   getMyAppointments
 } from "../../api/appointmentApi";
+import message from "../../../../kishan-sathi-backend/src/models/message";
 
 const FarmerDashboard = () => {
 
@@ -44,21 +45,7 @@ const FarmerDashboard = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white rounded-3xl p-6 border">
-
-          <h3 className="text-gray-500">
-
-            Total Diagnoses
-
-          </h3>
-
-          <h1 className="text-4xl font-bold mt-4 text-green-700">
-
-            0
-
-          </h1>
-
-        </div>
+        
 
         <div className="bg-white rounded-3xl p-6 border">
 
@@ -86,7 +73,7 @@ const FarmerDashboard = () => {
 
           <h1 className="text-4xl font-bold mt-4 text-green-700">
 
-            0
+            {message.length}
 
           </h1>
 
