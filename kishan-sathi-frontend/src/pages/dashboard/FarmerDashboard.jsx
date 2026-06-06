@@ -27,8 +27,10 @@ const FarmerDashboard = () => {
       const data =
         await getMyAppointments();
 
+      console.log(data);
+
       setAppointments(
-        data || []
+        data.appointments || []
       );
 
     } catch (error) {

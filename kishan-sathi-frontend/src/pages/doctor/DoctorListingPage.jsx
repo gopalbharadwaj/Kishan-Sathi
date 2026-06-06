@@ -51,7 +51,7 @@ const DoctorListingPage = () => {
             : data.doctors || []
         );
 
-        console.log("Doctors API:", data);
+        
 
       } catch (error) {
 
