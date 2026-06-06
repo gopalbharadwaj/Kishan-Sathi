@@ -6,7 +6,7 @@ import DashboardLayout
 import {
   getMyAppointments
 } from "../../api/appointmentApi";
-import message from "../../../../kishan-sathi-backend/src/models/message";
+
 
 const FarmerDashboard = () => {
 
@@ -73,7 +73,7 @@ const FarmerDashboard = () => {
 
           <h1 className="text-4xl font-bold mt-4 text-green-700">
 
-            {message.length}
+            2
 
           </h1>
 
