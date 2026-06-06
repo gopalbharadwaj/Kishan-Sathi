@@ -4,7 +4,7 @@ import {
 } from "react";
 
 import DashboardLayout
-from "../../layout/DashboardLayout";
+  from "../../layout/DashboardLayout";
 
 import {
   FaSearch,
@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 import { Link }
-from "react-router-dom";
+  from "react-router-dom";
 
 import {
   getDoctors
@@ -45,7 +45,9 @@ const DoctorListingPage = () => {
         const data =
           await getDoctors();
 
-        setDoctors(data);
+        setDoctors(
+          data.doctors || []
+        );
 
       } catch (error) {
 
@@ -58,16 +60,16 @@ const DoctorListingPage = () => {
   // Filter Doctors
 
   const filteredDoctors =
-    doctors.filter((doctor) =>
-
-      doctor.name
-        ?.toLowerCase()
-        .includes(
-          search.toLowerCase()
-        )
-
-    );
-
+    Array.isArray(doctors)
+      ? doctors.filter((doctor) =>
+        doctor.name
+          ?.toLowerCase()
+          .includes(
+            search.toLowerCase()
+          )
+      )
+      : [];
+      
   return (
 
     <DashboardLayout>
